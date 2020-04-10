@@ -114,6 +114,12 @@ RUN yum -y install \
     curl -sSL -o /usr/bin/docker-compose "https://github.com/docker/compose/releases/download/${versionDockerCompose}/docker-compose-Linux-x86_64" && \
     chmod +x /usr/bin/docker-compose && \
     #
+    # Install Keycloak Configurator
+    #
+    echo "installing Keycloak provider
+    curl -sSL -o /usr/bin/keycloak-provider "https://github.com/tazjin/terraform-provider-keycloak/releases/download/v1.0.0/terraform-provider-keycloak-v1.0.0-linux-amd64" && \
+    chmod +x /usr/bin/keycloak-provider && \
+    #
     # Install Azure-cli
     #
     echo "Installing azure-cli ${versionAzureCli}..." && \
